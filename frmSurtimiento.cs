@@ -1806,16 +1806,16 @@ namespace Picking
                         string fac = "";
                         //pruebas
                         fac = Global.obtener_factura_turno_zonas_orden1();
-
                         if (fac == "" || fac==null)
                         {
                            fac = Global.factura_por_surtir_zonas_orden1();
                         }
-
                             if (fac != "")
                             {
                                 Global.fecha_ultima_actividad = Global.FechaHoraActual();
                                 int idzona = Global.obtener_zona_inicio_picking1();
+                                //MessageBox.Show(fac+" "+ idzona);
+
                                 if (idzona > 0)
                                 {
                                     Global.idzona = idzona;

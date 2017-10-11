@@ -18,7 +18,7 @@ namespace Picking
         public string invcnbr = "";
         public bool desbloq = false;
         public bool ok = false;
-        static string localizacion="";
+        //static string localizacion="";
 
        // //declarar objetos Reader & ReaderData 
        //  Symbol.Barcode.Reader barcodeReader = null;

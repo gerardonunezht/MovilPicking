@@ -1345,7 +1345,7 @@ namespace Picking
                     }
                     break;
                  case Keys.F5:
-                    string res;
+                    //string res;
 
                     btn_no_disp_Click(this, EventArgs.Empty);
   

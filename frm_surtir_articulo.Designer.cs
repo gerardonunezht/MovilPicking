@@ -59,6 +59,9 @@
             this.tab_captura = new System.Windows.Forms.TabControl();
             this.lbl_tot_por_surtir = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.tmrObjetivo = new System.Windows.Forms.Timer();
+            this.lblTiempoObjetivo = new System.Windows.Forms.Label();
+            this.lblObjetivo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Clave.SuspendLayout();
             this.Codigo.SuspendLayout();
@@ -373,7 +376,7 @@
             this.lbl_tot_por_surtir.ForeColor = System.Drawing.Color.Lime;
             this.lbl_tot_por_surtir.Location = new System.Drawing.Point(0, 92);
             this.lbl_tot_por_surtir.Name = "lbl_tot_por_surtir";
-            this.lbl_tot_por_surtir.Size = new System.Drawing.Size(314, 57);
+            this.lbl_tot_por_surtir.Size = new System.Drawing.Size(207, 57);
             this.lbl_tot_por_surtir.Text = "0";
             this.lbl_tot_por_surtir.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
@@ -387,12 +390,41 @@
             this.label8.Size = new System.Drawing.Size(90, 21);
             this.label8.Text = "Surtir:";
             // 
+            // tmrObjetivo
+            // 
+            this.tmrObjetivo.Interval = 1000;
+            this.tmrObjetivo.Tick += new System.EventHandler(this.tmrObjetivo_Tick);
+            // 
+            // lblTiempoObjetivo
+            // 
+            this.lblTiempoObjetivo.BackColor = System.Drawing.Color.Black;
+            this.lblTiempoObjetivo.Font = new System.Drawing.Font("Tahoma", 24F, System.Drawing.FontStyle.Regular);
+            this.lblTiempoObjetivo.ForeColor = System.Drawing.Color.Red;
+            this.lblTiempoObjetivo.Location = new System.Drawing.Point(213, 110);
+            this.lblTiempoObjetivo.Name = "lblTiempoObjetivo";
+            this.lblTiempoObjetivo.Size = new System.Drawing.Size(101, 39);
+            this.lblTiempoObjetivo.Text = "0";
+            this.lblTiempoObjetivo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
+            // lblObjetivo
+            // 
+            this.lblObjetivo.BackColor = System.Drawing.Color.Black;
+            this.lblObjetivo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
+            this.lblObjetivo.ForeColor = System.Drawing.Color.White;
+            this.lblObjetivo.Location = new System.Drawing.Point(213, 92);
+            this.lblObjetivo.Name = "lblObjetivo";
+            this.lblObjetivo.Size = new System.Drawing.Size(101, 18);
+            this.lblObjetivo.Text = "Tiempo:";
+            this.lblObjetivo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
+            // 
             // frm_surtir_articulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(638, 455);
+            this.Controls.Add(this.lblObjetivo);
+            this.Controls.Add(this.lblTiempoObjetivo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lbl_tot_por_surtir);
             this.Controls.Add(this.txt_desc);
@@ -454,5 +486,8 @@
         private System.Windows.Forms.TabControl tab_captura;
         private System.Windows.Forms.Label lbl_tot_por_surtir;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Timer tmrObjetivo;
+        private System.Windows.Forms.Label lblTiempoObjetivo;
+        private System.Windows.Forms.Label lblObjetivo;
     }
 }
