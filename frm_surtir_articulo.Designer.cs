@@ -59,9 +59,6 @@
             this.tab_captura = new System.Windows.Forms.TabControl();
             this.lbl_tot_por_surtir = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblTiempoObjetivo = new System.Windows.Forms.Label();
-            this.tmrObjetivo = new System.Windows.Forms.Timer();
-            this.lblTiempo = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.Clave.SuspendLayout();
             this.Codigo.SuspendLayout();
@@ -241,11 +238,11 @@
             this.txt_desc.BackColor = System.Drawing.SystemColors.ControlText;
             this.txt_desc.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Bold);
             this.txt_desc.ForeColor = System.Drawing.Color.Lime;
-            this.txt_desc.Location = new System.Drawing.Point(2, 1);
+            this.txt_desc.Location = new System.Drawing.Point(1, 1);
             this.txt_desc.Multiline = true;
             this.txt_desc.Name = "txt_desc";
             this.txt_desc.ReadOnly = true;
-            this.txt_desc.Size = new System.Drawing.Size(312, 39);
+            this.txt_desc.Size = new System.Drawing.Size(313, 39);
             this.txt_desc.TabIndex = 60;
             this.txt_desc.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_desc.GotFocus += new System.EventHandler(this.txt_desc_GotFocus);
@@ -390,41 +387,12 @@
             this.label8.Size = new System.Drawing.Size(90, 21);
             this.label8.Text = "Surtir:";
             // 
-            // lblTiempoObjetivo
-            // 
-            this.lblTiempoObjetivo.BackColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lblTiempoObjetivo.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold);
-            this.lblTiempoObjetivo.ForeColor = System.Drawing.Color.White;
-            this.lblTiempoObjetivo.Location = new System.Drawing.Point(225, 126);
-            this.lblTiempoObjetivo.Name = "lblTiempoObjetivo";
-            this.lblTiempoObjetivo.Size = new System.Drawing.Size(88, 21);
-            this.lblTiempoObjetivo.Text = "00:00:00";
-            this.lblTiempoObjetivo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // tmrObjetivo
-            // 
-            this.tmrObjetivo.Interval = 1000;
-            this.tmrObjetivo.Tick += new System.EventHandler(this.tmrObjetivo_Tick);
-            // 
-            // lblTiempo
-            // 
-            this.lblTiempo.BackColor = System.Drawing.Color.Black;
-            this.lblTiempo.Font = new System.Drawing.Font("Tahoma", 10F, System.Drawing.FontStyle.Bold);
-            this.lblTiempo.ForeColor = System.Drawing.Color.White;
-            this.lblTiempo.Location = new System.Drawing.Point(225, 93);
-            this.lblTiempo.Name = "lblTiempo";
-            this.lblTiempo.Size = new System.Drawing.Size(89, 33);
-            this.lblTiempo.Text = "Tiempo Objetivo:";
-            this.lblTiempo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // frm_surtir_articulo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(638, 455);
-            this.Controls.Add(this.lblTiempoObjetivo);
-            this.Controls.Add(this.lblTiempo);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.lbl_tot_por_surtir);
             this.Controls.Add(this.txt_desc);
@@ -486,8 +454,5 @@
         private System.Windows.Forms.TabControl tab_captura;
         private System.Windows.Forms.Label lbl_tot_por_surtir;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label lblTiempoObjetivo;
-        private System.Windows.Forms.Timer tmrObjetivo;
-        private System.Windows.Forms.Label lblTiempo;
     }
 }

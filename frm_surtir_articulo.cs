@@ -1281,14 +1281,7 @@ namespace Picking
                             {
                                 lbl_unidad.Text = dr["Unidad"].ToString();
                             }
-
-                            if (!string.IsNullOrEmpty(dr["TiempoObjetivo"].ToString()))
-                            {
-                                
-                                    lblTiempoObjetivo.Text = TimeSpan.Parse("00:" + dr["TiempoObjetivo"].ToString().Replace(".", ":")).ToString();
-                                    tmrObjetivo.Enabled = true;
-                                
-                            }
+                            
                             
                             if (!string.IsNullOrEmpty(dr["CantSol"].ToString()))
                             {
@@ -1758,7 +1751,6 @@ namespace Picking
             try
             {
                 t1.Enabled = false;
-                tmrObjetivo.Enabled = false;
                 //timer_timeout.Enabled = false;
                 //Borrar la variables de la memoria
                 //if (barcodeReader != null)
@@ -1808,7 +1800,6 @@ namespace Picking
                 else
                 {
                     t1.Enabled = true;
-                    
                 }
             }
             else
@@ -1911,40 +1902,6 @@ namespace Picking
         private void txt_desc_GotFocus(object sender, EventArgs e)
         {
             txt_codigo.Focus();
-        }
-
-        private void tmrObjetivo_Tick(object sender, EventArgs e)
-        {
-            TimeSpan time = TimeSpan.Zero;
-            //Timer tmrObjetivo = new Timer();
-            //tmrObjetivo.Interval = 1000;
-
-
-            time = TimeSpan.Parse(lblTiempoObjetivo.Text);
-            time = time.Subtract(new TimeSpan(0, 0, 1));
-            lblTiempoObjetivo.Text = time.ToString();
-            if (time.Seconds >= 30)
-            {
-                lblTiempoObjetivo.ForeColor = Color.Lime;
-            }
-            else if(time.Seconds < 30 && time.Minutes==0)
-            {
-                System.Media.SystemSounds.Exclamation.Play(); ;
-                if (lblTiempoObjetivo.ForeColor == Color.Red)
-                {
-                    lblTiempoObjetivo.ForeColor = Color.Yellow;
-                }
-                else
-                {
-                    lblTiempoObjetivo.ForeColor = Color.Red;
-                }
-            }
-            if (time.Seconds == 0 && time.Minutes == 0)
-            {
-                lblTiempoObjetivo.ForeColor = Color.Red;
-                tmrObjetivo.Enabled = false;
-                return;
-            }
         }
 
       
